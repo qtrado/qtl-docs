@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PurchaseReceipts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="PurchaseReceipt" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="DocumentType"/>
+              <xs:element type="xs:byte" name="TransferFlag"/>
+              <xs:element type="xs:string" name="WarehouseGLN"/>
+              <xs:element type="xs:string" name="CustomerNo"/>
+              <xs:element type="xs:string" name="EDIRemoteSystemCode"/>
+              <xs:element type="xs:string" name="No"/>
+              <xs:element type="xs:string" name="PurchaseOrdeNo"/>
+			  <xs:element type="xs:string" name="ReceivedDate"/>
+              <xs:element type="xs:string" name="YourReference"/>
+              <xs:element name="Customer_Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="No"/>
+                    <xs:element type="xs:string" name="CustomerGLN"/>
+                    <xs:element type="xs:string" name="Name"/>
+                    <xs:element type="xs:string" name="Name2"/>
+                    <xs:element type="xs:string" name="Address"/>
+                    <xs:element type="xs:string" name="Address2"/>
+                    <xs:element type="xs:string" name="PostCode"/>
+                    <xs:element type="xs:string" name="City"/>
+                    <xs:element type="xs:string" name="CountryRegionCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Warehouse_Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="ShipToGLN"/>
+                    <xs:element type="xs:string" name="ShipToName"/>
+                    <xs:element type="xs:string" name="ShipToName2"/>
+                    <xs:element type="xs:string" name="ShipToAddress"/>
+                    <xs:element type="xs:string" name="ShipToAddress2"/>
+                    <xs:element type="xs:string" name="ShipToPostCode"/>
+                    <xs:element type="xs:string" name="ShipToCity"/>
+                    <xs:element type="xs:string" name="ShipToCountryRegionCode"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="PurchaseLines" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="PosNo"/>
+                    <xs:element type="xs:int" name="PurchaseLineNo"/>
+                    <xs:element type="xs:string" name="ItemNo"/>
+                    <xs:element type="xs:long" name="GTIN"/>
+                    <xs:element type="xs:long" name="GTINBaseUnitOfMeasure"/>
+                    <xs:element type="xs:string" name="CustomerItemNo"/>
+                    <xs:element type="xs:string" name="ItemDescription"/>
+                    <xs:element type="xs:string" name="ItemDescription2"/>
+                    <xs:element type="xs:float" name="Quantity"/>
+                    <xs:element type="xs:string" name="UnitOfMeasureCode"/>
+                    <xs:element type="xs:float" name="TotalPieces"/>
+                    <xs:element type="xs:float" name="QuantityBase"/>
+                    <xs:element type="xs:string" name="CustomerPurchaseOrderNo"/>
+                    <xs:element type="xs:string" name="CustomerPurchaseOrderLineNo"/>
+					<xs:element type="xs:string" name="ReturnReasonCode"/>
+                    <xs:element type="xs:string" name="ItemTracking"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Attachments">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Attachment" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="AttachmentDescription"/>
+                          <xs:element type="xs:string" name="AttachmentName"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="ArchiveName"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<xml>
+	<Header>
+		<EdiPartnerCode>EDIPARTNER</EdiPartnerCode>
+		<TenantId>M99</TenantId>
+		<Date>2020-04-08T10:05:02+02:00</Date>
+		<FileType>Orders</FileType>
+		<Remotesystem>DEFAULT</Remotesystem>
+	</Header>
+	<Orders>
+		<Order>
+      <CustomerOrderNo>112634</CustomerOrderNo>
+      <PaymentMethodCode>Amazon Pay</PaymentMethodCode>
+      <OrderTotal>53.8</OrderTotal>
+      <ShippingAdvise>complete</ShippingAdvise>/>
+      <ExpressOrder></ExpressOrder>
+      <ReferenceText>Your Order #1212</ReferenceText>
+      <LanguageCode>en</LanguageCode>
+      <CustomerSalesPersonName></CustomerSalesPersonName>
+      <CustomerSalesPersonPhone></CustomerSalesPersonPhone>
+      <CustomerSalesPersonFax></CustomerSalesPersonFax>
+      <CustomerSalesPersonEmail></CustomerSalesPersonEmail>
+      <CustomerSalesOrganizationalUnit></CustomerSalesOrganizationalUnit>
+      <OrderedByName></OrderedByName>
+      <OrderedByEmail></OrderedByEmail>
+      <BillToName></BillToName>
+      <BillToName2></BillToName2>
+      <BillToContact></BillToContact>
+      <BillToAddress></BillToAddress>
+      <BillToPostCode></BillToPostCode>
+      <BillToCity></BillToCity>			
+			<BillToCountryRegionCode></BillToCountryRegionCode>
+      <ShipToName>Frau Mustermann</ShipToName>
+      <ShipToName2 />
+      <ShipToContact></ShipToContact>
+			<ShipToAddress>Mustergasse 10</ShipToAddress>
+      <ShipToPostCode>51580</ShipToPostCode>
+			<ShipToCity>Reichshof</ShipToCity>			
+			<ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+			<ShipToEmail>frau.mustermann@freenet.de</ShipToEmail>
+			<ShipComment>Lieferung bitte zusammen, wenn alles da ist.</ShipComment>
+			<ShippingAgentCode>DHL</ShippingAgentCode>
+			<ShippingAgentServiceCode/>
+      <ShipmentDate></ShipmentDate>
+      <Instructions>
+        <Instruction>
+          <InstructionName>Amazon Shipment</InstructionName>
+        </Instruction>
+        <Instruction>
+          <InstructionName>Special packaging</InstructionName>
+        </Instruction>
+      </Instructions>
+      <Attachments>
+        <Attachment>
+          <Description>Rechnung Nr. 112634</Description>
+          <Path>112634_Rechnung.pdf</Path>
+        </Attachment>
+      </Attachments>
+			<Products>
+				<Product>
+					<Type>simple</Type>
+					<CustomerLineNo>1</CustomerLineNo>
+					<Quantity>1</Quantity>
+					<DepositCustomerItemNo>4001824234806</DepositCustomerItemNo>
+					<Description1>Mitteldecke HEATHER Sander Farbe: 60 - linen, Gr&#xF6;&#xDF;e: 85x85</Description1>
+					<Description2/>
+					<UnitPrice>26.9</UnitPrice>
+					<QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+					<UnitWeight>0.200</UnitWeight>
+					<LotNo/>
+					<SerialNo/>
+					<LocationCode/>
+					<BinCode/>
+				</Product>
+				<Product>
+					<Type>simple</Type>
+					<CustomerLineNo>2</CustomerLineNo>
+					<Quantity>1</Quantity>
+					<DepositCustomerItemNo>4001824234028</DepositCustomerItemNo>
+					<Description1>Mitteldecke MALLORCA Gr&#xF6;&#xDF;e: 85x85</Description1>
+					<Description2/>
+					<UnitPrice>26.9</UnitPrice>
+					<QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+					<UnitWeight>0.200</UnitWeight>
+					<LotNo/>
+					<SerialNo/>
+					<LocationCode/>
+					<BinCode/>
+				</Product>
+			</Products>			
+		</Order>
+    <Order>
+      <CustomerOrderNo>112635</CustomerOrderNo>
+      <PaymentMethodCode>Paypal</PaymentMethodCode>
+      <OrderTotal>53.8</OrderTotal>
+      <ShippingAdvise>partial</ShippingAdvise>/>
+      <ExpressOrder></ExpressOrder>
+      <ReferenceText>Ihre Bestellung #1414</ReferenceText>
+      <LanguageCode>de</LanguageCode>
+      <CustomerSalesPersonName></CustomerSalesPersonName>
+      <CustomerSalesPersonPhone></CustomerSalesPersonPhone>
+      <CustomerSalesPersonFax></CustomerSalesPersonFax>
+      <CustomerSalesPersonEmail></CustomerSalesPersonEmail>
+      <CustomerSalesOrganizationalUnit></CustomerSalesOrganizationalUnit>
+      <OrderedByName></OrderedByName>
+      <OrderedByEmail></OrderedByEmail>
+      <BillToName></BillToName>
+      <BillToName2></BillToName2>
+      <BillToContact></BillToContact>
+      <BillToAddress></BillToAddress>
+      <BillToPostCode></BillToPostCode>
+      <BillToCity></BillToCity>
+      <BillToCountryRegionCode></BillToCountryRegionCode>
+      <ShipToName>Herr Mustermann</ShipToName>
+      <ShipToName2 />
+      <ShipToContact></ShipToContact>
+      <ShipToAddress>Mustergasse 10</ShipToAddress>
+      <ShipToPostCode>51580</ShipToPostCode>
+      <ShipToCity>Reichshof</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+      <ShipToEmail>herr.mustermann@freenet.de</ShipToEmail>
+      <ShipComment></ShipComment>
+      <ShippingAgentCode>DPD</ShippingAgentCode>
+      <ShippingAgentServiceCode/>
+      <ShipmentDate></ShipmentDate>
+      <Instructions>      
+      </Instructions>
+      <Attachments>
+        <Attachment>
+          <Description>Rechnung Nr. 112635</Description>
+          <Path>112635_Rechnung.pdf</Path>
+        </Attachment>
+      </Attachments>
+      <Products>
+        <Product>
+          <Type>simple</Type>
+          <CustomerLineNo>1</CustomerLineNo>
+          <Quantity>1</Quantity>
+          <DepositCustomerItemNo>4001824234806</DepositCustomerItemNo>
+          <Description1>Mitteldecke HEATHER Sander Farbe: 60 - linen, Gr&#xF6;&#xDF;e: 85x85</Description1>
+          <Description2/>
+          <UnitPrice>26.9</UnitPrice>
+          <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+          <UnitWeight>0.200</UnitWeight>
+          <LotNo/>
+          <SerialNo/>          
+        </Product>
+        <Product>
+          <Type>simple</Type>
+          <CustomerLineNo>2</CustomerLineNo>
+          <Quantity>1</Quantity>
+          <DepositCustomerItemNo>4001824234028</DepositCustomerItemNo>
+          <Description1>Mitteldecke MALLORCA Gr&#xF6;&#xDF;e: 85x85</Description1>
+          <Description2/>
+          <UnitPrice>26.9</UnitPrice>
+          <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+          <UnitWeight>0.200</UnitWeight>
+          <LotNo/>
+          <SerialNo/>          
+        </Product>
+      </Products>      
+    </Order>
+	</Orders>
+</xml>

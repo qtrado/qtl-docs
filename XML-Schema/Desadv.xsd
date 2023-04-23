@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SalesShipments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Shipment" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DocumentType" type="xs:string" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Type of Document. reserved, for internal use only</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="TransferFlag" type="xs:unsignedByte" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>0 = first time send, 1 = resend. reserved, for internal use only</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="VendorGLN" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>This is our Global Location Number obtained from GS1. Max. 13 characters of type string, currently not set</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustomerNo" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>This is your Customer No. at QL. It will be defined by QTRADO Logistics Sales department and given to you. Max. 20 characters of type string</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EDIRemoteSystemCode" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Identifies the sending system, e.g. a Webshop. It will be defined by QTRADO Logistics IT department and given to you. Max. 20 characters of type string</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="No" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Identifies the Sales Shipment. Max. 20 characters of type string</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OrderNo" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Identifies our Sales Order. Max. 20 characters of type string</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipmentDate" minOccurs="1" maxOccurs="1">
+                <xs:annotation>
+                  <xs:documentation>Date of shipment, Format DD.MM.YY</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Customer_Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="No" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>This is your Customer No. at QL. It will be defined by QTRADO Logistics Sales department and given to you. Max. 20 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="CustomerGLN" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>This is your Global Location Number obtained from GS1. Max. 13 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="13" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Name" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of Customer Name. Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Name2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of Customer Name. Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Address" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of Customer Address. Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Address2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of Customer Address. Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="PostCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Customer Address Post Code Max. 20 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="City" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Customer Address City. Max. 30 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="CountryRegionCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Country code, 2 digits ISO, e.g. DE, AT, CH, GB</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Billing_Address" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="BillToCustomerNo" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>This is the Customer No. at QL who receives invoices. It will be defined by QTRADO Logistics Sales department and given to you. Max. 20 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToGLN" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>This is the Global Location Number obtained from GS1 for the invoice receiver. Max. 13 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="13" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToName" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of Bill to Customer Name (invoice receiver). Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToName2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of Bill to Customer Name (invoice receiver). Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToAddress" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of Bill to Customer Address (invoice receiver. Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToAddress2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of Bill to Customer Address (invoice receiver). Max. 50 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToPostCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Bill to Customer Address Post Code (invoice receiver).Max. 20 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToCity" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Bill to Customer City (invoice receiver).Max. 30 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="BillToCountryRegionCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Country code, 2 digits ISO, e.g. DE, AT, CH, GB</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Shipping_Address" minOccurs="1" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ShipToGLN">
+                      <xs:annotation>
+                        <xs:documentation>This is the Global Location Number obtained from GS1 for this shipping address. Max. 13 characters of type string</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="13" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToName" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Ship to Name, max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToName2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Ship to Name, max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToAddress" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of ship to address, e.g. streetname, department etc., max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToAddress2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of ship to address, e.g. streetname, department etc., max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToPostCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Ship to Post Code, max. 20 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToCity" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Ship to City, max. 30 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ShipToCountryRegionCode" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Country code, 2 digits ISO, e.g. DE, AT, CH, GB</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="2" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="ShipmentLines">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="PosNo" type="xs:unsignedInt" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>EDI Line number</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="SalesShipmentLineNo" type="xs:unsignedInt" minOccurs="0" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Sales Shipment Line number</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ItemNo" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>QL internal item number., max. 20 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="20" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="GTIN" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>GTIN of item, max. 13 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="13" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="GTINBaseUnitOfMeasure" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>GTIN of item unit of measure, max. 13 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="13" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="CustomerItemNo" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Item No./SKU of customer, max. 30 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ItemDescription" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 1 of item description, max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ItemDescription2" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Line 2 of item description, max. 50 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="50" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Quantity" minOccurs="1" maxOccurs="1" type="xs:integer">
+                      <xs:annotation>
+                        <xs:documentation>quantity shipped, integer</xs:documentation>
+                      </xs:annotation>                      
+                    </xs:element>
+                    <xs:element name="UnitOfMeasureCode" type="xs:string" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Unit of Measure code, e.g. PCS, KG, M</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="TotalPieces" minOccurs="1" maxOccurs="1" type="xs:integer">
+                      <xs:annotation>
+                        <xs:documentation>Total Amount of shipped items for this line. e.g. if Quantity base = 10 and Quantity = 5 then TotalPieces = 50, decimal sign = Comma (,)</xs:documentation>
+                      </xs:annotation>                      
+                    </xs:element>
+                    <xs:element name="QuantityBase" minOccurs="1" maxOccurs="1" type="xs:integer">
+                      <xs:annotation>
+                        <xs:documentation>Number of items for the smalest unit that can be picked, e.g. a Sixpack of beer -&gt; Quantity Base = 6, decimal sign = Comma (,)</xs:documentation>
+                      </xs:annotation>                      
+                    </xs:element>
+                    <xs:element name="CustomerOrderNo" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Your order number, max. 35 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="35" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="CustomerOrderLineNo" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Your order line number, max. 30 characters</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="30" />
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="ItemTracking" minOccurs="0" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ItemTrackingLine" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="TrackItemNo" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Internal Item No., max. 20 characters</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="20" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackCustomerItemNo" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Item No./SKU of customer, max. 30 characters</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="30" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackItemDescription" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Item description, max. 50 characters</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="50" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackShipmentLineNo" type="xs:unsignedInt" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>referencing line no of the sales shipment (ShipmentLines/ShipemntLineNo)</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="TrackQuantity" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>quantity shipped, decimal sign = Comma (,)</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:pattern value="\d+(,\d+)?" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackLotNo" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Lot No., max. 20 characters</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="20" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackSerialNo" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>Item Serial No., max. 20 characters</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="20" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="TrackExpirationDate" minOccurs="1" maxOccurs="1">
+                                  <xs:annotation>
+                                    <xs:documentation>best before date, Format DD.MM.YY</xs:documentation>
+                                  </xs:annotation>
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="20" />
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Tracking">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ShipmentOrder" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Parcel" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ParcelNo" type="xs:string" />
+                                <xs:element name="Weight" type="xs:string" />
+                                <xs:element name="ShippingAgent" type="xs:string">
+                                  <xs:annotation>
+                                    <xs:documentation>Company that fullfils the shipment, e.g. DHL, DPD, UPS, FEDEX</xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="ServiceDescription" type="xs:string" />
+                                <xs:element name="TrackingURL" type="xs:string" />
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Message>
+  <Type>OSTRPT</Type>
+  <VendorGLN>4399902394116</VendorGLN>
+  <CustomerGLN />
+  <CustomerNo>4800363</CustomerNo>
+  <Status>
+    <CustomerOrderNo>93149</CustomerOrderNo>
+    <StatusCode>5</StatusCode>
+    <StatusDescription>geliefert(vollständig)</StatusDescription>
+    <StatusTimestamp>20210909000000</StatusTimestamp>
+    <CorrespondingDocumentType>2</CorrespondingDocumentType>
+    <CorrespondingDocumentNo>VKL1001865</CorrespondingDocumentNo>
+    <CorrespondingDocumentDate>20210909</CorrespondingDocumentDate>
+    <EDIRemoteSystemCode>DEFAULT</EDIRemoteSystemCode>
+    <Errors />
+    <ShipmentOrder>
+      <ShippingAgentChanged>false</ShippingAgentChanged>
+      <OriginShippingAgent />
+      <OriginShippingAgentService />
+      <CustomerShippingAgent>6</CustomerShippingAgent>
+      <CustomerShippingAgentService />
+      <Parcel>
+        <ParcelNo>00343434334343010355</ParcelNo>
+        <Weight>0.750</Weight>
+        <ShippingAgent>DHL</ShippingAgent>
+        <ServiceDescription>DHL Classic</ServiceDescription>
+        <TrackingURL>http://nolp.dhl.de/nextt-online-public/de/search?piececode=00343434334343010355</TrackingURL>
+      </Parcel>
+    </ShipmentOrder>
+  </Status>
+</Message>

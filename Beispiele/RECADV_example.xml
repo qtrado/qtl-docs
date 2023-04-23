@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PurchaseReceipts>
+  <PurchaseReceipt>
+    <DocumentType>RECADV</DocumentType>
+    <TransferFlag>0</TransferFlag>
+    <WarehouseGLN>4399902394116</WarehouseGLN>
+    <CustomerNo>4800352</CustomerNo>
+    <EDIRemoteSystemCode />
+    <No>EKL145468</No>
+    <PurchaseOrdeNo>BE0020712</PurchaseOrdeNo>
+    <ReceivedDate>16.06.2021</ReceivedDate>
+	<YourReference>Some reference text</YourReference>
+    <Customer_Address>
+      <No>4800352</No>
+      <CustomerGLN />
+      <Name>CustomerName</Name>
+      <Name2 />
+      <Address>Bachstraße 1</Address>
+      <Address2 />
+      <PostCode>99999</PostCode>
+      <City>Somewhere</City>
+      <CountryRegionCode>DE</CountryRegionCode>
+    </Customer_Address>
+    <Warehouse_Address>
+      <ShipToGLN>4399902394116</ShipToGLN>
+      <ShipToName>QTRADO Logistics GmbH &amp; Co.KG</ShipToName>
+      <ShipToName2 />
+      <ShipToAddress>Kimplerstrasse 340</ShipToAddress>
+      <ShipToAddress2 />
+      <ShipToPostCode>47807</ShipToPostCode>
+      <ShipToCity>Krefeld</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+    </Warehouse_Address>
+    <PurchaseLines>
+      <PosNo>1</PosNo>
+      <PurchaseLineNo>40000</PurchaseLineNo>
+      <ItemNo>ZTV-000100922</ItemNo>
+      <GTIN>5050217259260</GTIN>
+      <GTINBaseUnitOfMeasure>5050217259260</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>5050217259260</CustomerItemNo>
+      <ItemDescription>Muscle Joe Premium Stringer Tank Top Weiss S</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>8,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>8,00</TotalPieces>
+      <QuantityBase />
+      <CustomerPurchaseOrderNo>PANWORLDBRANDS26.05.21</CustomerPurchaseOrderNo>
+      <CustomerPurchaseOrderLineNo />
+	  <ReturnReasonCode />
+      <ItemTracking />
+    </PurchaseLines>
+    <Attachments />
+  </PurchaseReceipt>
+  <PurchaseReceipt>
+    <DocumentType>RECADV</DocumentType>
+    <TransferFlag>0</TransferFlag>
+    <WarehouseGLN>4399902394116</WarehouseGLN>
+    <CustomerNo>4800352</CustomerNo>
+    <EDIRemoteSystemCode />
+    <No>EKL145469</No>
+    <PurchaseOrdeNo>BE0020712</PurchaseOrdeNo>
+    <ReceivedDate>16.06.2021</ReceivedDate>
+	<YourReference>Some reference text</YourReference>
+    <Customer_Address>
+      <No>4800352</No>
+      <CustomerGLN />
+      <Name>CustomerName</Name>
+      <Name2 />
+      <Address>Bachstraße 1</Address>
+      <Address2 />
+      <PostCode>99999</PostCode>
+      <City>Somewhere</City>
+      <CountryRegionCode>DE</CountryRegionCode>
+    </Customer_Address>
+    <Warehouse_Address>
+      <ShipToGLN>4399902394116</ShipToGLN>
+      <ShipToName>QTRADO Logistics GmbH &amp; Co.KG</ShipToName>
+      <ShipToName2 />
+      <ShipToAddress>Kimplerstrasse 340</ShipToAddress>
+      <ShipToAddress2 />
+      <ShipToPostCode>47807</ShipToPostCode>
+      <ShipToCity>Krefeld</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+    </Warehouse_Address>
+    <PurchaseLines>
+      <PosNo>1</PosNo>
+      <PurchaseLineNo>80000</PurchaseLineNo>
+      <ItemNo>ZTV-000100909</ItemNo>
+      <GTIN>5050217259086</GTIN>
+      <GTINBaseUnitOfMeasure>5050217259086</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>5050217259086</CustomerItemNo>
+      <ItemDescription>Muscle Joe Premium Stringer Tank Top Grau L</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>3,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>3,00</TotalPieces>
+      <QuantityBase />
+      <CustomerPurchaseOrderNo>PANWORLDBRANDS26.05.21</CustomerPurchaseOrderNo>
+      <CustomerPurchaseOrderLineNo />
+	  <ReturnReasonCode />
+      <ItemTracking />
+    </PurchaseLines>
+    <Attachments />
+  </PurchaseReceipt>
+  <PurchaseReceipt>
+    <DocumentType>RECADV</DocumentType>
+    <TransferFlag>0</TransferFlag>
+    <WarehouseGLN>4399902394116</WarehouseGLN>
+    <CustomerNo>4800352</CustomerNo>
+    <EDIRemoteSystemCode />
+    <No>EKL145470</No>
+    <PurchaseOrdeNo>BE0020712</PurchaseOrdeNo>
+    <ReceivedDate>16.06.2021</ReceivedDate>
+	<YourReference>Some reference text</YourReference>
+    <Customer_Address>
+      <No>4800352</No>
+      <CustomerGLN />
+      <Name>CustomerName</Name>
+      <Name2 />
+      <Address>Bachstraße 1</Address>
+      <Address2 />
+      <PostCode>99999</PostCode>
+      <City>Somewhere</City>
+      <CountryRegionCode>DE</CountryRegionCode>
+    </Customer_Address>
+    <Warehouse_Address>
+      <ShipToGLN>4399902394116</ShipToGLN>
+      <ShipToName>QTRADO Logistics GmbH &amp; Co.KG</ShipToName>
+      <ShipToName2 />
+      <ShipToAddress>Kimplerstrasse 340</ShipToAddress>
+      <ShipToAddress2 />
+      <ShipToPostCode>47807</ShipToPostCode>
+      <ShipToCity>Krefeld</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+    </Warehouse_Address>
+    <PurchaseLines>
+      <PosNo>1</PosNo>
+      <PurchaseLineNo>100000</PurchaseLineNo>
+      <ItemNo>ZTV-000100939</ItemNo>
+      <GTIN>5050217259369</GTIN>
+      <GTINBaseUnitOfMeasure>5050217259369</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>5050217259369</CustomerItemNo>
+      <ItemDescription>Muscle Joe Kontrast Stringer Tank Top Schwarz / Gr</ItemDescription>
+      <ItemDescription2>au L</ItemDescription2>
+      <Quantity>14,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>14,00</TotalPieces>
+      <QuantityBase />
+      <CustomerPurchaseOrderNo>PANWORLDBRANDS26.05.21</CustomerPurchaseOrderNo>
+      <CustomerPurchaseOrderLineNo />
+	  <ReturnReasonCode />
+      <ItemTracking />
+    </PurchaseLines>
+    <Attachments />
+  </PurchaseReceipt>
+  <PurchaseReceipt>
+    <DocumentType>RECADV</DocumentType>
+    <TransferFlag>0</TransferFlag>
+    <WarehouseGLN>4399902394116</WarehouseGLN>
+    <CustomerNo>4800352</CustomerNo>
+    <EDIRemoteSystemCode />
+    <No>EKL145471</No>
+    <PurchaseOrdeNo>BE0020712</PurchaseOrdeNo>
+    <ReceivedDate>16.06.2021</ReceivedDate>
+	<YourReference>Some reference text</YourReference>
+    <Customer_Address>
+      <No>4800352</No>
+      <CustomerGLN />
+      <Name>CustomerName</Name>
+      <Name2 />
+      <Address>Bachstraße 1</Address>
+      <Address2 />
+      <PostCode>99999</PostCode>
+      <City>Somewhere</City>
+      <CountryRegionCode>DE</CountryRegionCode>
+    </Customer_Address>
+    <Warehouse_Address>
+      <ShipToGLN>4399902394116</ShipToGLN>
+      <ShipToName>QTRADO Logistics GmbH &amp; Co.KG</ShipToName>
+      <ShipToName2 />
+      <ShipToAddress>Kimplerstrasse 340</ShipToAddress>
+      <ShipToAddress2 />
+      <ShipToPostCode>47807</ShipToPostCode>
+      <ShipToCity>Krefeld</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>
+    </Warehouse_Address>
+    <PurchaseLines>
+      <PosNo>1</PosNo>
+      <PurchaseLineNo>30000</PurchaseLineNo>
+      <ItemNo>ZTV-000100915</ItemNo>
+      <GTIN>5050217259178</GTIN>
+      <GTINBaseUnitOfMeasure>5050217259178</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>5050217259178</CustomerItemNo>
+      <ItemDescription>Muscle Joe Premium Stringer Tank Top Dunkelgrau XL</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>43,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>43,00</TotalPieces>
+      <QuantityBase />
+      <CustomerPurchaseOrderNo>PANWORLDBRANDS26.05.21</CustomerPurchaseOrderNo>
+      <CustomerPurchaseOrderLineNo />
+	  <ReturnReasonCode />
+      <ItemTracking />
+    </PurchaseLines>
+    <Attachments />
+  </PurchaseReceipt>
+</PurchaseReceipts>

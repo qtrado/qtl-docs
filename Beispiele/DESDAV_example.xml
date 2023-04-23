@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SalesShipments xmlns="http://www.qtrado-logistics.de/desadv">
+  <Shipment>
+    <DocumentType>351</DocumentType>
+    <TransferFlag>0</TransferFlag>
+    <VendorGLN>0000000000000</VendorGLN>
+    <CustomerNo>4800276</CustomerNo>
+    <EDIRemoteSystemCode>DEFAULT</EDIRemoteSystemCode>
+    <No>VKL0333089</No>
+    <OrderNo>AUF0362678</OrderNo>
+    <ShipmentDate>25.04.19</ShipmentDate>
+    <Customer_Address>
+      <No>9999999</No>
+      <CustomerGLN />
+      <Name>Ein Kunde</Name>
+      <Name2 />
+      <Address>Eine Strasse </Address>
+      <Address2 />
+      <PostCode>99999</PostCode>
+      <City>Ein Ort</City>
+      <CountryRegionCode>DE</CountryRegionCode>
+    </Customer_Address>
+    <Billing_Address>
+      <BillToCustomerNo>9999999</BillToCustomerNo>
+      <BillToGLN />
+      <BillToName>Ein Kunde</BillToName>
+      <BillToName2 />
+      <BillToAddress>Eine Straße</BillToAddress>
+      <BillToAddress2 />
+      <BillToPostCode>99999</BillToPostCode>
+      <BillToCity>Ein Ort</BillToCity>
+      <BillToCountryRegionCode>DE</BillToCountryRegionCode>
+    </Billing_Address>
+    <Shipping_Address>
+      <ShipToGLN />
+      <ShipToName>Zu beliefernder Kunde</ShipToName>
+      <ShipToName2>Eine Person</ShipToName2>
+      <ShipToAddress>Musterstr. 7876</ShipToAddress>
+      <ShipToAddress2 />
+      <ShipToPostCode>99999</ShipToPostCode>
+      <ShipToCity>Ein Ort</ShipToCity>
+      <ShipToCountryRegionCode />
+    </Shipping_Address>
+    <ShipmentLines>
+      <PosNo>1</PosNo>
+      <SalesShipmentLineNo>10000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059664</ItemNo>
+      <GTIN>4260249010727</GTIN>
+      <GTINBaseUnitOfMeasure>4260249010727</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01020</CustomerItemNo>
+      <ItemDescription>mawaii - FaceCare SPF 50, 75ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>10,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>10</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059664</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01020</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - FaceCare SPF 50, 75ml</TrackItemDescription>
+          <TrackShipmentLineNo>10000</TrackShipmentLineNo>
+          <TrackQuantity>10</TrackQuantity>
+          <TrackLotNo>82014P5/802</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <ShipmentLines>
+      <PosNo>2</PosNo>
+      <SalesShipmentLineNo>20000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059668</ItemNo>
+      <GTIN>4260249010062</GTIN>
+      <GTINBaseUnitOfMeasure>4260249010062</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01006</CustomerItemNo>
+      <ItemDescription>mawaii - SunCare SPF 50, 75ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>6,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>6</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059668</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01006</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - SunCare SPF 50, 75ml</TrackItemDescription>
+          <TrackShipmentLineNo>20000</TrackShipmentLineNo>
+          <TrackQuantity>6</TrackQuantity>
+          <TrackLotNo>82014P5/802</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <ShipmentLines>
+      <PosNo>3</PosNo>
+      <SalesShipmentLineNo>30000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059658</ItemNo>
+      <GTIN>4260249011250</GTIN>
+      <GTINBaseUnitOfMeasure>4260249011250</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01021</CustomerItemNo>
+      <ItemDescription>mawaii - SunCare SPF 30, 175ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>10,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>10</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059658</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01021</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - SunCare SPF 30, 175ml</TrackItemDescription>
+          <TrackShipmentLineNo>30000</TrackShipmentLineNo>
+          <TrackQuantity>10</TrackQuantity>
+          <TrackLotNo>82008P4/802</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <ShipmentLines>
+      <PosNo>4</PosNo>
+      <SalesShipmentLineNo>40000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059663</ItemNo>
+      <GTIN>4260249010703</GTIN>
+      <GTINBaseUnitOfMeasure>4260249010703</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01018</CustomerItemNo>
+      <ItemDescription>mawaii - FaceCare SPF 30, 75ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>6,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>6</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059663</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01018</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - FaceCare SPF 30, 75ml</TrackItemDescription>
+          <TrackShipmentLineNo>40000</TrackShipmentLineNo>
+          <TrackQuantity>6</TrackQuantity>
+          <TrackLotNo>82008P4/801</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <ShipmentLines>
+      <PosNo>5</PosNo>
+      <SalesShipmentLineNo>50000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059667</ItemNo>
+      <GTIN>4260249011267</GTIN>
+      <GTINBaseUnitOfMeasure>4260249011267</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01022</CustomerItemNo>
+      <ItemDescription>mawaii - SunCare SPF 30, 75ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>6,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>6</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059667</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01022</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - SunCare SPF 30, 75ml</TrackItemDescription>
+          <TrackShipmentLineNo>50000</TrackShipmentLineNo>
+          <TrackQuantity>6</TrackQuantity>
+          <TrackLotNo>82008P4/802</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <ShipmentLines>
+      <PosNo>6</PosNo>
+      <SalesShipmentLineNo>60000</SalesShipmentLineNo>
+      <ItemNo>ZTV-000059665</ItemNo>
+      <GTIN>4260249010086</GTIN>
+      <GTINBaseUnitOfMeasure>4260249010086</GTINBaseUnitOfMeasure>
+      <CustomerItemNo>MWI_01008</CustomerItemNo>
+      <ItemDescription>mawaii - FaceCreme Gel, Aloe Vera After Sun, 75ml</ItemDescription>
+      <ItemDescription2 />
+      <Quantity>6,00</Quantity>
+      <UnitOfMeasureCode>STUECK</UnitOfMeasureCode>
+      <TotalPieces>6</TotalPieces>
+      <QuantityBase />
+      <CustomerOrderNo>22788</CustomerOrderNo>
+      <CustomerOrderLineNo />
+      <ItemTracking>
+        <ItemTrackingLine>
+          <TrackItemNo>ZTV-000059665</TrackItemNo>
+          <TrackCustomerItemNo>MWI_01008</TrackCustomerItemNo>
+          <TrackItemDescription>mawaii - FaceCreme Gel, Aloe Vera After Sun, 75ml</TrackItemDescription>
+          <TrackShipmentLineNo>60000</TrackShipmentLineNo>
+          <TrackQuantity>6</TrackQuantity>
+          <TrackLotNo>82009P3/801</TrackLotNo>
+          <TrackSerialNo />
+          <TrackExpirationDate />
+        </ItemTrackingLine>
+      </ItemTracking>
+    </ShipmentLines>
+    <Tracking>
+      <ShipmentOrder>
+        <Parcel>
+          <ParcelNo>0147999999999999</ParcelNo>
+          <Weight>5,700</Weight>
+          <ShippingAgent>DPD</ShippingAgent>
+          <ServiceDescription>DPD Classic</ServiceDescription>
+          <TrackingURL>http://extranet.dpd.de/cgi-bin/delistrack?typ=2&amp;lang=en&amp;pknr=0147999999999999</TrackingURL>
+        </Parcel>
+      </ShipmentOrder>
+    </Tracking>
+  </Shipment>
+</SalesShipments>

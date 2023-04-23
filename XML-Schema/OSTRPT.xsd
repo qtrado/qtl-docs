@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Message">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="Type" minOccurs="1" maxOccurs="1"/>
+        <xs:element type="xs:string" name="VendorGLN" minOccurs="0" maxOccurs="1"/>
+        <xs:element type="xs:string" name="CustomerGLN" minOccurs="0" maxOccurs="1" />
+        <xs:element type="xs:string" name="CustomerNo" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Status" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="CustomerOrderNo" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:byte" name="StatusCode" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:string" name="StatusDescription" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:long" name="StatusTimestamp" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:byte" name="CorrespondingDocumentType" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:string" name="CorrespondingDocumentNo" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:int" name="CorrespondingDocumentDate" minOccurs="1" maxOccurs="1"/>
+              <xs:element type="xs:string" name="EDIRemoteSystemCode" minOccurs="1" maxOccurs="1"/>
+              <xs:element name="Errors">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Error" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ErrorMessage"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ShipmentOrder" minOccurs="0" maxOccurs="1">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element  name="ShippingAgentChanged" minOccurs="0" maxOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="false"></xs:enumeration>
+                          <xs:enumeration value="true"></xs:enumeration>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="OriginShippingAgent" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="OriginShippingAgentService" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="CustomerShippingAgent" minOccurs="0" maxOccurs="1"/>
+                    <xs:element type="xs:string" name="CustomerShippingAgentService" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="Parcel" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="ParcelNo" minOccurs="1" maxOccurs="1"/>
+                          <xs:element type="xs:float" name="Weight" minOccurs="1" maxOccurs="1"/>
+                          <xs:element type="xs:string" name="ShippingAgent" minOccurs="1" maxOccurs="1"/>
+                          <xs:element type="xs:string" name="ServiceDescription" minOccurs="1" maxOccurs="1"/>
+                          <xs:element type="xs:anyURI" name="TrackingURL" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

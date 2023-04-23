@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Message>
+  <Type>ITMLEDG</Type>
+  <VendorGLN>4399902394116</VendorGLN>
+  <CustomerGLN />
+  <CustomerNo>9999999</CustomerNo>
+  <DateTime>20201007130915</DateTime>
+  <ItemLedgerEntries>
+    <ItemLedgerEntry>
+      <EntryNo>2941289</EntryNo>
+      <ItemNo>ZTV-000083255</ItemNo>
+      <CustomerItemNo>8250</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>0</EntryTypeCode>
+      <EntryType>Einkauf</EntryType>
+      <DocumentTypeCode>5</DocumentTypeCode>
+      <DocumentType>Einkaufslieferung</DocumentType>
+      <Description>Einkaufslieferung/Wareneingang EKL096720</Description>
+      <Quantity>1.680</Quantity>
+      <PostingDate>27.05.20</PostingDate>
+      <DocumentNo>EKL096720</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2973574</EntryNo>
+      <ItemNo>ZTV-000083446</ItemNo>
+      <CustomerItemNo>0986R</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>0</EntryTypeCode>
+      <EntryType>Einkauf</EntryType>
+      <DocumentTypeCode>5</DocumentTypeCode>
+      <DocumentType>Einkaufslieferung</DocumentType>
+      <Description>Einkaufslieferung/Wareneingang EKL098409</Description>
+      <Quantity>28</Quantity>
+      <PostingDate>09.06.20</PostingDate>
+      <DocumentNo>EKL098409</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2978405</EntryNo>
+      <ItemNo>ZTV-000083383</ItemNo>
+      <CustomerItemNo>9935</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>0</EntryTypeCode>
+      <EntryType>Einkauf</EntryType>
+      <DocumentTypeCode>5</DocumentTypeCode>
+      <DocumentType>Einkaufslieferung</DocumentType>
+      <Description>Einkaufslieferung/Wareneingang EKL098924</Description>
+      <Quantity>16</Quantity>
+      <PostingDate>15.06.20</PostingDate>
+      <DocumentNo>EKL098924</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2983196</EntryNo>
+      <ItemNo>ZTV-000083071</ItemNo>
+      <CustomerItemNo>5099</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>3</EntryTypeCode>
+      <EntryType>Abgang</EntryType>
+      <DocumentTypeCode>5</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>-80</Quantity>
+      <PostingDate>16.06.20</PostingDate>
+      <DocumentNo>EINLAGERUNG</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2993066</EntryNo>
+      <ItemNo>ZTV-000084982</ItemNo>
+      <CustomerItemNo>2860-BDRUCK</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>2</EntryTypeCode>
+      <EntryType>Zugang</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>5.000</Quantity>
+      <PostingDate>19.06.20</PostingDate>
+      <DocumentNo>EINBUCHUNG DRUCK</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2994033</EntryNo>
+      <ItemNo>ZTV-000083192</ItemNo>
+      <CustomerItemNo>7147</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>1</EntryTypeCode>
+      <EntryType>Verkauf</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType>Verkaufsrücksendung</DocumentType>
+      <Description>Verkaufsrücklieferung/-reklamation RS00002892</Description>
+      <Quantity>2</Quantity>
+      <PostingDate>22.06.20</PostingDate>
+      <DocumentNo>RS00002892</DocumentNo>
+      <ExternalDocumentNo>SCHMITT</ExternalDocumentNo>
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>2994172</EntryNo>
+      <ItemNo>ZTV-000084943</ItemNo>
+      <CustomerItemNo>HB1000</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>2</EntryTypeCode>
+      <EntryType>Zugang</EntryType>
+      <DocumentTypeCode>3</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>9.100</Quantity>
+      <PostingDate>22.06.20</PostingDate>
+      <DocumentNo>EINLAGERUNG DRUCK</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>3009906</EntryNo>
+      <ItemNo>ZTV-000083275</ItemNo>
+      <CustomerItemNo>9310</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>0</EntryTypeCode>
+      <EntryType>Einkauf</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType>Einkaufslieferung</DocumentType>
+      <Description>Einkaufslieferung/Wareneingang EKL099461</Description>
+      <Quantity>5.250</Quantity>
+      <PostingDate>24.06.20</PostingDate>
+      <DocumentNo>EKL099461</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>3016309</EntryNo>
+      <ItemNo>ZTV-000083268</ItemNo>
+      <CustomerItemNo>9302</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>2</EntryTypeCode>
+      <EntryType>Zugang</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>100</Quantity>
+      <PostingDate>29.06.20</PostingDate>
+      <DocumentNo>SDSAD</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>3016310</EntryNo>
+      <ItemNo>ZTV-000083270</ItemNo>
+      <CustomerItemNo>9304</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>2</EntryTypeCode>
+      <EntryType>Zugang</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>110</Quantity>
+      <PostingDate>29.06.20</PostingDate>
+      <DocumentNo>SDSAD</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+    <ItemLedgerEntry>
+      <EntryNo>3016311</EntryNo>
+      <ItemNo>ZTV-000083271</ItemNo>
+      <CustomerItemNo>9306</CustomerItemNo>
+      <UnitOfMeasure>STUECK</UnitOfMeasure>
+      <QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
+      <LotNo />
+      <EntryTypeCode>2</EntryTypeCode>
+      <EntryType>Zugang</EntryType>
+      <DocumentTypeCode>0</DocumentTypeCode>
+      <DocumentType> </DocumentType>
+      <Description>Manuelle Korrekturbuchung</Description>
+      <Quantity>150</Quantity>
+      <PostingDate>29.06.20</PostingDate>
+      <DocumentNo>SDSAD</DocumentNo>
+      <ExternalDocumentNo />
+    </ItemLedgerEntry>
+  </ItemLedgerEntries>
+</Message>
