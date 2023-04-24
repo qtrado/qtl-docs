@@ -672,6 +672,9 @@ die Auswertung des Dateinamens dem Auftrag zugeordnet werden.\
 
 ## 3.3. PURCHASEORDER - Einkaufsbestellung (Wareneingangsankündigung) / Purchaseorder (Inbound Goods) (CSV)
 
+<details>
+<summary>Schemadefinition des PURCHASEORDERS-CSV-Formats</summary>
+
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |  Mandatory  |
 |----------:|-------------------------------|------------------------------|----------------------|:-----------:|
 ||**Felder Bestellkopf, in jeder Zeile zu wiederholen**||||
@@ -702,6 +705,8 @@ die Auswertung des Dateinamens dem Auftrag zugeordnet werden.\
 |25         |LotNo                          |Chargennummer                 |string (20)           |             |
 |26         |SerialNo                       |Seriennummer                  |string (20)           |             |
 |27         |ExpirationDate                 |Ablaufdatum/MHD               |date, DD.MM.YYYY      |             |
+
+</details>
 
 # 5. Kundenindividuelles Format
 
