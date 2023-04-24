@@ -165,12 +165,12 @@ Alternativ können sie die Anschrift gemäß den Vorgaben von DHL über die\
 Felder ShipToName und ShipToName2 und ShipToAddress selbst formatieren.
 
 Beispiel:
-
+```
   Max Mustermann
   898989898
   Packstation 33
   99999 Musterstadt
-
+```
 #### Dateianhänge
 Dateiname des Dokumentes z. B. original Lieferschein.pdf.\
 Anhand des Namens wird die Datei vom vorgegebenen Ordner runtergeladen und dem Auftrag zugewiesen.\
