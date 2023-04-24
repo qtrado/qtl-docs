@@ -668,7 +668,7 @@ Anhänge können einem Auftrag auch zugeordnet werden, indem der Dateiname die A
 Beispiel: CustomerOrderNo = 4711, Dateiname = Lieferschein_4711.pdf.\
 Wir können unser System entsprechend konfigurieren, dass die Dateien heruntergeladen werden und dann über\
 die Auswertung des Dateinamens dem Auftrag zugeordnet werden.\
-**Bitte beachten sie unbedingt auch die Anmerkungen (mehr ) unter [1.2.1](#weitere-hinweise-zu-einzelnen-feldern-des-orders-formats)**
+**Bitte beachten sie unbedingt auch die Anmerkungen unter [1.2.1](#121-weitere-hinweise-zu-einzelnen-feldern-des-orders-formats)**
 
 ## 3.3. PURCHASEORDER - Einkaufsbestellung (Wareneingangsankündigung) / Purchaseorder (Inbound Goods) (CSV)
 
