@@ -269,7 +269,7 @@ In der DESADV Datei erhalten sie Informationen zu einem ausgelieferten Auftrag.
 Dateiname: DESADV_*.xml
 
 <details>
-<summary>Schemdefinition des DESADV-Formats>
+<summary>Schemdefinition des DESADV-Formats</summary>
 
 Schema: Desadv.xsd
 
