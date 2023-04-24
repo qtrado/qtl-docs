@@ -13,13 +13,20 @@ Bitte Artikelstammdaten als CSV oder Excel senden.
 
 ## 1.2. ORDERS - Aufträge / Sales Orders (Outbound Goods)
 
-Es gibt keine Vorgabe für den Dateinamen außer dass er auf ".xml" enden muss.
+Mit diesem Format können sie uns einen Warenausgang (Lieferung an Dritte oder sie selbst) melden.
+
+Es gibt keine Vorgabe für den Dateinamen außer dass er auf ".xml" enden muss.\
+Wir empfehlen jedoch einen sprechenden Namen zu vergeben.
 
 Nachfolgend nun die Schemabeschreibung.
 
-**Bitte beachten sie unbedingt auch die Fußnoten bei den diversen Feldern.**
+**Bitte beachten sie unbedingt auch die weiteren Informationen (mehr...) bei den diversen Feldern.**
+
+<details>
+<summary>Schemabeschreibung des ORDERS-Formats</summary>
 
 Schema: ORDERS.XSD
+
 
  |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |  Mandatory  |
  |----------:|-------------------------------|------------------------------|----------------------|:-----------:|
@@ -35,7 +42,7 @@ Schema: ORDERS.XSD
  |10         |PaymentMethodCode              |Zahlungsart                   |string                |             |
  |11         |OrderTotal                     |Auftragswert inkl. MwSt.      |decimal               |             |
  |12         |ShippingAdvise                 |Teil-/Komplettlieferung       |string enum Complete,Partial|       |
- |13         |ExpressOrder                   |Auftrag mit hoher Priorität [^8] |string enum           |             |
+ |13         |ExpressOrder                   |Auftrag mit hoher Priorität [mehr...](#termin--und-expressversand) |string enum           |             |
  |14         |ReferenceText                  |Referenztext, z. B. Bestellnummer ihres Kunden|string (35)|        |
  |15         |LanguageCode                   |Sprachcode des Dokumentes     |string( 10)           |             |
  |16         |CustomerSalesPersonName        |Name des Sachbearbeiters      |string (50)           |             |
@@ -52,28 +59,28 @@ Schema: ORDERS.XSD
  |27         |BillToPostCode                 |Rechnung-An PLZ               |string (20)           |             |
  |28         |BillToCity                     |Rechnung-An Ort               |string (30)           |             |
  |29         |BillToCounty                   |Bei Ländern in denen zutreffend, Bezirk/Landkreis         |string (30)           |             |
- |30         |BillToCountryRegionCode        |Länderkürzel (ISO-ALPHA2) [^1]  |string (2)            |             |
- |31         |ShipToName                     |Liefer-An Name, Zeile 1 [^6]   |string (50)           | X           |
- |32         |ShipToName2                    |Liefer-An Name, Zeile 2 [^6]   |string (50)           |             |
- |33         |ShipToContact                  |Liefer-An Kontakt [^6]         |string (50)           |             |
- |34         |ShipToAddress                  |Liefer-An Adresse (Straße + Haus-Nr.) [^5] [^6]             |string (50)           | X           |
- |35         |ShipToPostnummer               |Packstation-Nr. [^2]           |string (30)           |             |
+ |30         |BillToCountryRegionCode        |Länderkürzel (ISO 3166-2) [mehr...](#identifikation-von-ländern)  |string (2)            |             |
+ |31         |ShipToName                     |Liefer-An Name, Zeile 1 [mehr...](#vorgaben-für-lieferanschrift)   |string (50)           | X           |
+ |32         |ShipToName2                    |Liefer-An Name, Zeile 2 [mehr...](#vorgaben-für-lieferanschrift)   |string (50)           |             |
+ |33         |ShipToContact                  |Liefer-An Kontakt [mehr...](#vorgaben-für-lieferanschrift)         |string (50)           |             |
+ |34         |ShipToAddress                  |Liefer-An Adresse (Straße + Haus-Nr.) [mehr...](#vorgaben-für-lieferanschrift)             |string (50)           | X           |
+ |35         |ShipToPostnummer               |Packstation-Nr. [mehr...](#lieferung-an-packstation)           |string (30)           |             |
  |36         |ShipToPostCode                 |Liefer-An PLZ [^7]             |string (20)           | X           |
- |37         |ShipToCity                     |Liefer-An Ort [^6]              |string (30)           | X           |
+ |37         |ShipToCity                     |Liefer-An Ort [mehr...](#vorgaben-für-lieferanschrift)              |string (30)           | X           |
  |38         |ShipToCounty                   |Bei Ländern in denen zutreffend, Bezirk/Landkreis         |string (30)           |             |
- |39         |ShipToCountryRegionCode        |Länderkürzel (ISO-ALPHA2) [^6]  |string (2)            | X           |
+ |39         |ShipToCountryRegionCode        |Länderkürzel (ISO 3166-2) [mehr...](#identifikation-von-ländern)  |string (2)            | X           |
  |40         |ShipToEmail                    |Email-Adresse des Warenempfängers            |string (80)           |             |
  |41         |ShipToPhoneNo                  |Telefonnummer des Warenempfängers            |string (30)           |             |
  |42         |ShipToTourSequence             |Fahrfolge, interne Verwendung |string (20)           |             |
  |43         |ShipComment                    |Versandsbemerkung             |string                |             |
  |44         |ShippingAgentCode              |Versanddienstleister          |string                |             |
  |45         |ShippingAgentServiceCode       |Versandtyp                    |string                |             |
- |46         |ShipmentDate                   |Warenausgangsdatum [^4]        |date, DD.MM.YYYY      |             |
+ |46         |ShipmentDate                   |Warenausgangsdatum [mehr...](#termin--und-expressversand)        |date, DD.MM.YYYY      |             |
  |47         |**Order / Instructions / Instruction**||||
  |48         |InstructionName                |Handlungsanweisung, Name      |string                | X           |
  |49         |**Order / Attachments / Attachment**||||
  |50         |Description                    | Bezeichnung der Datei        |string (30)           | X           |
- |51         |Filename                       | Dateiname [^3]                |string (255)          | X           |
+ |51         |Filename                       | Dateiname [mehr...](#dateianhänge)                |string (255)          | X           |
  |52         |**Order / Products / Product**|||X|
  |53         |Type                           |Typ von Produkt               |string enum           |             |
  |54         |CustomerLineNo                 |Auftragsposition              |string (20)           |             |
@@ -88,40 +95,26 @@ Schema: ORDERS.XSD
  |63         |LotNo                          |Chargenummer                  |string (20)           |             |
  |64         |SerialNo                       |Seriennummer                  |string (20)           |             |
 
-[^1]: Länder werden immer anhand ihres eindeutigen zweistelligen ISO-Codes identifiziert,\
+</details>
+
+### 1.2.1 Weitere Hinweise zu einzelnen Feldern des ORDERS-Formats
+
+#### Identifikation von Ländern
+Länder werden immer anhand ihres eindeutigen zweistelligen ISO 3166-2 Codes (z.B. DE, AT, CH) identifiziert,\
 um abweichende oder postalisch falsche Schreibweisen zu vermeiden.
 
-[^2]: Soll die Lieferung an eine Packstation oder eine Postfiliale gehen,\
-ist die jeweilige Packstation oder Postfiliale im Feld „ShipToAddress" zu speichern.\
-Die Postnummer wird in das Feld „ShipToPostnummer" ausgegeben.\
-Handelt es sich nicht um eine Lieferung an eine Packstation oder Postfiliale,\
-ist das Feld „ShipToPostnummer" leer zu lassen.
+#### Postleitzahlvalidierung
+Postleitzahlen werden in Vernindung mit dem Lieferland gegen Prüfmuster der EZB validiert.\
+Die Prüfmuster finden Sie in der Datei\
+List_postal_code_formatting_rules_and_regular_expressions_with_Annotations.xlsx
 
-Alternativ können sie die Anschrift gemäß den Vorgaben von DHL über die\
-Felder ShipToName und ShipToName2 und ShipToAddress selbst formatieren.
+#### Vorgaben für Lieferanschrift
 
-Beispiel:
+Einige Versender, wie z. B. DHL unterstützen bei Straßennamen nur 30 Zeichen.\
+Sofern möglich, empfehlen wir dies für ihre Systeme zu berücksichtigen.
 
-  Max Mustermann
-  898989898
-  Packstation 33
-  99999 Musterstadt
-
-[^3]: Dateiname des Dokumentes z. B. original Lieferschein.pdf.\
-Anhand des Namens wird die Datei vom vorgegebenen Ordner runtergeladen und dem Auftrag zugewiesen.\
-**Dies ist ein Pflichtfeld**, wenn ein Anhang übermittelt werden soll.\
-**Es ist zwingend erforderlich, dass die Dateien vor den Aufträgen hochgeladen werden.**
-
-[^4]: Bitte stimmen sie die Verwendung dieser Funktion mit dem Vertrieb ab.\
-Die terminierte Auslieferung eines Auftrages (gewünschtes Warenausgangsdatum),\
-benötigt besondere Vorkehrungen und kann Auswirkungen auf die Auslieferung haben.
-
-[^5]: Einige Versender, wie z. B. DHL unterstützen bei Straßennamen nur 30 Zeichen.\
-Sofern möglich, empfehlen wir dies für ihre Systeme zu berücksichtigen.\
-**Wir weisen darauf hin, dass sie für die Übermittlung einer korrekten Empfängeradresse verantwortlich sind**.
-
-[^6]: Bedingt durch die Vorgaben der Versanddienstleister und unser WMS muss eine Lieferanschrift\
-**eindeutig durch die Felder ShipToName, ShipToName2, ShipToAddress, ShipToPostCode, ShipToCity, ShipToCountryRegionCode definiert sein.**
+Bedingt durch die Vorgaben der Versanddienstleister und unser WMS muss eine Lieferanschrift\
+eindeutig durch die Felder ShipToName, ShipToName2, ShipToAddress, ShipToPostCode, ShipToCity, ShipToCountryRegionCode definiert sein.
 
 Sie können diese Felder, wie nachstehend beschrieben, nutzen.
 
@@ -151,15 +144,45 @@ Beispiele:
 
 Ist ShipToCountryRegionCode nicht gefüllt, wird Deutschland als Lieferland angenommen.
 
-Das Feld ShipToContact kann optional genutzt werden.\
-**ACHTUNG !**\
-**Das Feld wird leider nicht von allen Versanddienstleistern unterstützt. Z. B. DPD**
+Das Feld ShipToContact kann optional genutzt werden.
 
-[^7]: Postleitzahlen werden gegen Prüfmuster der EZB validiert.\
-Die Prüfmuster finden Sie in der Datei\
-List_postal_code_formatting_rules_and_regular_expressions_with_Annotations.xlsx
+```
+Das Feld ShipToContact wird leider nicht von allen Versanddienstleistern unterstützt. Z. B. DPD
+```
 
-### 1.2.1. Weitere Hinweise zum Format und zur Verarbeitung von Aufträgen
+```
+Wir weisen darauf hin, dass sie für die Übermittlung einer korrekten Empfängeradresse verantwortlich sind!
+```
+
+#### Lieferung an Packstation
+Soll die Lieferung an eine Packstation oder eine Postfiliale gehen,\
+ist die jeweilige Packstation oder Postfiliale im Feld „ShipToAddress" zu speichern.\
+Die Postnummer wird in das Feld „ShipToPostnummer" ausgegeben.\
+Handelt es sich nicht um eine Lieferung an eine Packstation oder Postfiliale,\
+ist das Feld „ShipToPostnummer" leer zu lassen.
+
+Alternativ können sie die Anschrift gemäß den Vorgaben von DHL über die\
+Felder ShipToName und ShipToName2 und ShipToAddress selbst formatieren.
+
+Beispiel:
+
+  Max Mustermann
+  898989898
+  Packstation 33
+  99999 Musterstadt
+
+#### Dateianhänge
+Dateiname des Dokumentes z. B. original Lieferschein.pdf.\
+Anhand des Namens wird die Datei vom vorgegebenen Ordner runtergeladen und dem Auftrag zugewiesen.\
+**Dies ist ein Pflichtfeld**, wenn ein Anhang übermittelt werden soll.\
+**Es ist zwingend erforderlich, dass die Dateien vor den Aufträgen hochgeladen werden.**
+
+#### Termin- und Expressversand
+Bitte stimmen sie die Verwendung dieser Funktion mit dem Vertrieb ab.\
+Die terminierte Auslieferung eines Auftrages (gewünschtes Warenausgangsdatum),\
+benötigt besondere Vorkehrungen und kann Auswirkungen auf die Auslieferung haben.
+
+### 1.2.2. Weitere Hinweise zum Format und zur Verarbeitung von Aufträgen
 
 Bei der Erstellung der XML-Datei können sie Felder, die kein Pflichtfeld sind,\
 entweder leer lassen oder das XML-Tag gar nicht ausgeben.\
@@ -183,6 +206,16 @@ wird nur die neueste Version des Auftrages berücksichtigt.\
 Wir identifizieren einen Auftrag dabei anhand der CustomerOrderNo.
 
 ## 1.3. PURCHASEORDER - Einkaufsbestellung (Wareneingangsankündigung) / Purchaseorder (Inbound Goods) (XML)
+
+Mit diesem Format können sie uns einen geplanten Wareneingang melden.
+
+Es gibt keine Vorgabe für den Dateinamen außer dass er auf ".xml" enden muss.\
+Wir empfehlen jedoch einen sprechenden Namen zu vergeben.
+
+Nachfolgend nun die Schemabeschreibung.
+
+<details>
+<summary>Schemabeschreibung des PURCHASEORDERS-Formats</summary
 
 Schema: PurchaseOrders.xsd
 
@@ -224,12 +257,19 @@ Schema: PurchaseOrders.xsd
   |34         |LotNo                          |Chargennummer                 |string (20)           |             |
   |35         |SerialNo                       |Seriennummer                  |string (20)           |             |
   |36         |ExpirationDate                 |Ablaufdatum/MHD               |date, DD.MM.YYYY      |             |
-  
+ 
+ </details>
+
 # 2. Rückmeldungen / Outbound Messages (XML)
 
 ## 2.1. DESADV - Lieferschein / Delivery Note (XML)
 
 In der DESADV Datei erhalten sie Informationen zu einem ausgelieferten Auftrag.
+
+Dateiname: DESADV_*.xml
+
+<details>
+<summary>Schemdefinition des DESADV-Formats>
 
 Schema: Desadv.xsd
 
@@ -299,9 +339,16 @@ Schema: Desadv.xsd
  |65         |ServiceDescription             | Versandoption                |string                |
  |66         |TrackingURL                    | Tracking URL                 |string                |
 
+ </details>
+
 ## 2.2. INVRPT - Bestandsmeldung / Inventory Report (XML)
 
 Durch die INVRPT Datei erhalten Sie die Bestandsinformation zu Artikeln
+
+Dateiname: INVRPT_*.xml
+
+<details>
+<summary>Schemadefinition des INVRPT-Formats</summary>
 
  |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
  |----------:|-------------------------------|------------------------------|----------------------|
@@ -322,10 +369,17 @@ Durch die INVRPT Datei erhalten Sie die Bestandsinformation zu Artikeln
  |15|QtyInDepositOrder|Menge in Einlagerauftrag (Wareneingang)|integer|
  |16|QtyInDislocationOrder|Menge in Auslagerauftag (Warenausgang)|integer|
 
+</details>
+
 ## 2.3. ITMLEDG - Artikelposten / Item Ledger Entries (XML)
 
 Mit diesem Format übermitteln wir ihnen Artikelposten (Bestandsveränderungen).\
 Diese werden in Verbindung mit z.B. Wareneingängen, Retouren, manuellen Korrekturen oder Inventuren erzeugt.
+
+Dateiname: ITMLEDG_*.xml
+
+<details>
+<summary>Schemadefinition des ITMLEDG-Formats</summary>
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
 |----------:|-------------------------------|------------------------------|----------------------|
@@ -352,6 +406,8 @@ Diese werden in Verbindung mit z.B. Wareneingängen, Retouren, manuellen Korrekt
 |21|DocumentNo|Interne Belegnummer|string|
 |21|ExternalDocumentNo|Externe Belegnummer|string|
 
+</details>
+
 ## 2.4. OSTRPT - Auftragsstatus / Order Status (XML)
 
 In den OSTRPT Dateien erhalten Sie die Information über Auftragsstatusänderungen,\
@@ -360,7 +416,11 @@ Versandinformationen und Paket-Nr.-Informationen.
 Die Dateien haben folgendes Benennungsschema:\
 OSTRPT_CustomerOrderNo_StatusCode_YYYYMMDD_HHmmss.xml  
 
-Der Dateiname dient zur Information kann aber nicht sicher ausgewertet werden.  
+Der Dateiname dient zur Information kann aber nicht sicher ausgewertet werden. 
+
+<details>
+<summary>Schemadefinition des OSTRPT-Formats</summary>
+
   
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
 |----------:|-------------------------------|------------------------------|----------------------|
@@ -393,9 +453,16 @@ Der Dateiname dient zur Information kann aber nicht sicher ausgewertet werden.
 |27|ServiceDescription                | Versand-Typ                       |string|
 |28|TrackingURL                       | Tracking-URL                      |string|
 
+</details>
+
 ## 2.5. RECADV - Wareneingangsmeldung / Inbound Goods Receipt (XML)
 
 Mit diesem Format übertragen wir ihnen gebuchte Wareneingänge und ggf. zugehörige Dokumente (z. B. Lieferschein) oder Bilder der Ware.
+
+Dateiname: WARENEINGANG_*.xml
+
+<details>
+<summary>Schemadefinition des RECADV-Formats</summary>
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
 |----------:|-------------------------------|------------------------------|----------------------|
@@ -462,15 +529,18 @@ Der Dateiname entspricht dem Feld PurchaseReceiptNo und der Dateiendung .zip.\
 Beispiel: EKL123456.zip. Für jede Datei eines Wareneingangs gibt es einen Attachment Eintrag.\
 Alle Attachment-Einträge zusammen stellen also das Inhaltsverzeichnis der zip-Datei dar.
 
+</details>
+
 # 3. Importformate / Inbound Messages (CSV)
 
 Zusätzlich zu den XML-Formaten, können wir Aufträge, Artikelstammdaten\
 und Wareneingangsmeldungen als CSV- oder Excel-Datei importieren.
 
 **ACHTUNG !**
-**Aktuell migrieren wir unser WMS auf ein neues System.**
-**Dadurch ist diese Dokumentation nicht zu 100% zutreffend und kann nur als Orientierung dienen.**
-
+```
+Aktuell migrieren wir unser WMS auf ein neues System.
+Dadurch ist diese Dokumentation nicht zu 100% zutreffend und kann nur als Orientierung dienen.
+```
 **HINWEIS zu Spaltennamen**
 Spaltennamen spielen für die Verarbeitung in unserem System keine Rolle.
 
@@ -482,6 +552,9 @@ Diese muss immer der von uns erstellten Konfiguration entsprechen,\
 damit die Dateien automatisiert importiert werden können.
 
 ## 3.1. PRICAT - Artikelstammdaten / Product Master Data (CSV)
+
+<details>
+<summary>Schemadefinition des INVRPT-Formats</summary>
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |Mandatory|
 |----------:|-------------------------------|------------------------------|----------------------|:-------:|
@@ -509,19 +582,24 @@ damit die Dateien automatisiert importiert werden können.
 Artikel-Beschreibung gesetzt. Wenn ein anderer Code verwendet wird, wird
 dieser als Übersetzung im Navision angelegt.
 
+</details>
+
 Bei der Auflistung der Felder handelt es sich um die wichtigsten Informationen.\
 Weitere Felder, wie z. B. Gebinde und diverse Freifelder, stehen zur verfügung und können bei Bedarf abgestimmt werden.
 
 ## 3.2. ORDERS - Aufträge / Sales Order (CSV)
 
+<details>
+<summary>Schemadefinition des ORDERS-CSV-Formats</summary>
+
  |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |Mandatory|
  |----------:|-------------------------------|------------------------------|----------------------|:-------:|
- ||**Felder Auftragskopf, in jeder Zeile zu wiederholen** [^9]||||
+ ||**Felder Auftragskopf, in jeder Zeile zu wiederholen** [mehr...](#aufbau-csv-flat-format)||||
  |1         |CustomerOrderNo                |Ihre Auftrags-Nr.             |string (35)           | X           |
  |2         |PaymentMethodCode              |Zahlungsart                   |string                |             |
  |3         |OrderTotal                     |Auftragswert inkl. MwSt.      |decimal               |             |
  |4         |ShippingAdvise                 |Teil-/Komplettlieferung       |string enum Complete,Partial|       |
- |5         |ExpressOrder                   |Auftrag mit hoher Priorität[^8]|string enum           |             |
+ |5         |ExpressOrder                   |Auftrag mit hoher Priorität|string enum           |             |
  |6         |ReferenceText                  |Referenztext, z. B. Bestellnummer ihres Kunden|string (35)|        |
  |7         |LanguageCode                   |Sprachcode des Dokumentes     |string( 10)           |             |
  |8         |CustomerSalesPersonName        |Name des Sachbearbeiters      |string (50)           |             |
@@ -538,28 +616,28 @@ Weitere Felder, wie z. B. Gebinde und diverse Freifelder, stehen zur verfügung 
  |19         |BillToPostCode                 |Rechnung-An PLZ               |string (20)           |             |
  |20         |BillToCity                     |Rechnung-An Ort               |string (30)           |             |
  |21         |BillToCounty                   |Bei Ländern in denen zutreffend, Bezirk/Landkreis         |string (30)           |             |
- |22         |BillToCountryRegionCode        |Länderkürzel (ISO-ALPHA2)[^1]  |string (2)            |             |
- |23         |ShipToName                     |Liefer-An Name, Zeile 1 [^6]   |string (50)           | X           |
- |24         |ShipToName2                    |Liefer-An Name, Zeile 2 [^6]   |string (50)           |             |
- |25         |ShipToContact                  |Liefer-An Kontakt [^6]         |string (50)           |             |
+ |22         |BillToCountryRegionCode        |Länderkürzel (ISO 3166-2)  |string (2)            |             |
+ |23         |ShipToName                     |Liefer-An Name, Zeile 1    |string (50)           | X           |
+ |24         |ShipToName2                    |Liefer-An Name, Zeile 2    |string (50)           |             |
+ |25         |ShipToContact                  |Liefer-An Kontakt          |string (50)           |             |
  |26         |ShipToAddress                  |Liefer-An Adresse (Straße + Haus-Nr.) [^5] [^6]             |string (50)           | X           |
- |27         |ShipToPostnummer               |Packstation-Nr. [^2]           |string (30)           |             |
- |28         |ShipToPostCode                 |Liefer-An PLZ [^7]             |string (20)           | X           |
- |29         |ShipToCity                     |Liefer-An Ort [^6]              |string (30)           | X           |
+ |27         |ShipToPostnummer               |Packstation-Nr.            |string (30)           |             |
+ |28         |ShipToPostCode                 |Liefer-An PLZ              |string (20)           | X           |
+ |29         |ShipToCity                     |Liefer-An Ort               |string (30)           | X           |
  |30         |ShipToCounty                   |Bei Ländern in denen zutreffend, Bezirk/Landkreis         |string (30)           |             |
- |31         |ShipToCountryRegionCode        |Länderkürzel (ISO-ALPHA2) [^6]  |string (2)            | X           |
+ |31         |ShipToCountryRegionCode        |Länderkürzel (ISO 3166-2)   |string (2)            | X           |
  |32         |ShipToEmail                    |Email-Adresse des Warenempfängers            |string (80)           |             |
  |34         |ShipToPhoneNo                  |Telefonnummer des Warenempfängers            |string (30)           |             |
  |35         |ShipToTourSequence             |Fahrfolge, interne Verwendung |string (20)           |             |
  |36         |ShipComment                    |Versandsbemerkung             |string                |             |
  |37         |ShippingAgentCode              |Versanddienstleister          |string                |             |
  |38         |ShippingAgentServiceCode       |Versandtyp                    |string                |             |
- |39         |ShipmentDate                   |Warenausgangsdatum [^4]        |date, DD.MM.YYYY      |             |
+ |39         |ShipmentDate                   |Warenausgangsdatum         |date, DD.MM.YYYY      |             |
  |40         |InstructionName1                |Handlungsanweisung 1, Name      |string                |            |
  |41         |InstructionName2                |Handlungsanweisung 2, Name      |string                |            |
  |42         |InstructionName3                |Handlungsanweisung 3, Name      |string                |            |
  |43         |AttachmentDescription|PDF-Anhang, Beschreibung      |string                | (X)           |
- |44         |AttachmentPath|PDF-Anhang, Dateiname [^10]     |string                | (X)           |
+ |44         |AttachmentPath|PDF-Anhang, Dateiname [mehr...](#zuordnung-von-anhängen-über-dateiname)     |string                | (X)           |
  ||**Felder Auftragszeilen** [^9]|||
  |45         |Type                           |Typ von Produkt               |string enum           |             |
  |46         |CustomerLineNo                 |Auftragsposition              |string (20)           |             |
@@ -574,7 +652,8 @@ Weitere Felder, wie z. B. Gebinde und diverse Freifelder, stehen zur verfügung 
  |55         |LotNo                          |Chargenummer                  |string (20)           |             |
  |56         |SerialNo                       |Seriennummer                  |string (20)           |             |
 
-[^9]:Es muss für jede Auftragsposition eine Zeile in der CSV Datei vorhanden sein.\
+#### Aufbau CSV Flat Format
+Es muss für jede Auftragsposition eine Zeile in der CSV Datei vorhanden sein.\
 Wenn Sie also einen Auftrag mit 3 Positionen übermitteln wollen,\
 müssen in der CSV Datei 3 Zeilen mit denselben Informationen im Bereich des Auftragskopfs (Lieferadresse, Auftrags-Nr., etc.)\
 und den jeweiligen Artikelinformationen je Position übermittelt werden.
@@ -582,46 +661,47 @@ und den jeweiligen Artikelinformationen je Position übermittelt werden.
 Alle Zeilen eines Auftrages müssen direkt untereinanderstehen.\
 Alle Zeilen eines Auftrages haben den gleichen Wert im Feld CustomerOrderNo.
 
-[^10]:Anhänge können einem Auftrag auch zugeordnet werden, indem der Dateiname die Auftragsnummer enthällt.\
+#### Zuordnung von Anhängen über Dateiname
+Anhänge können einem Auftrag auch zugeordnet werden, indem der Dateiname die Auftragsnummer enthällt.\
 Beispiel: CustomerOrderNo = 4711, Dateiname = Lieferschein_4711.pdf.\
 Wir können unser System entsprechend konfigurieren, dass die Dateien heruntergeladen werden und dann über\
 die Auswertung des Dateinamens dem Auftrag zugeordnet werden.\
-**Bitte beachten sie unbedingt auch die Anmerkungen (Fußnoten) unter 1.2**
+**Bitte beachten sie unbedingt auch die Anmerkungen (mehr ) unter [1.2.1](#weitere-hinweise-zu-einzelnen-feldern-des-orders-formats)**
 
 ## 3.3. PURCHASEORDER - Einkaufsbestellung (Wareneingangsankündigung) / Purchaseorder (Inbound Goods) (CSV)
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |  Mandatory  |
-  |----------:|-------------------------------|------------------------------|----------------------|:-----------:|
-  ||**Felder Bestellkopf, in jeder Zeile zu wiederholen**||||
-  | 1         |CustomerOrderNo                |Ihre Bestell-Nr.              |string (35)           | X           |
-  |2         |ExpectedReceiptDate            |Wareneingangsdatum            |date, DD.MM.YYYY      |             |
-  |3         |ReferenceText                  |Referenztext/-nummer          |string (35)           |             |
-  |4         |VendorShipmentNo               |Lieferscheinrn. Lieferant     |string (35)           |             |
-  |5         |ShippedFromName                |Lieferant Name, Zeile 1       |string (50)           |             |
-  |6         |ShippedFromName2               |Lieferant Name, Zeile 2       |string (50)           |             |
-  |7         |ShippedFromContact             |Lieferant Kontakt             |string (50)           |             |
-  |8         |ShippedFromAddress             |Lieferant, Straße + Hausnr.   |string (50)           |             |
-  |9         |ShippedFromPostCode            |Lieferant, Postleitzahl       |string (20)           |             |
-  |10         |ShippedFromCity                |Lieferant, Ort                |string (30)           |             |
-  |11         |ShippedFromCounty              |Lieferant, Bezirk/Landkreis   |string (30)           |             |
-  |12         |ShippedFromCountryRegionCode   |Lieferant, Länderkürzel ISO2  |string (2)            |             |
-  |13         |ShippedFromEmail               |Lieferant, Email              |string (80)           |             |
-  |14         |Comment                        |Kommentar                     |string                |             |
-  |16         |Description                    |Beschreibung der Datei        |string (30)           | X           |
-  |17         |Path                           |Dateiname                     |string (255)          | X           |
-  ||**Felder Bestellzeilen**||||
-  |18         |CustomerLineNo                 |Zeilenreferenz Bestellposition|string (20)           |             |
-  |10         |DepositCustomerItemNo          |Artikelnr. / SKU              |string (30)           | X           |
-  |20         |Description1                   |Artikelbeschreibung, Zeile 1  |string (50)           |             |
-  |21         |Description2                   |Artikelbeschreibung, Zeile 2  |string (50)           |             |
-  |22         |Quantity                       |Menge                         |integer               | X           |
-  |23         |UnitOfMeasureCode              |Einheit, ggf. Mapping erford. |string (20)           |             |
-  |24         |QtyPerUnitOfMeasure            |Menge (Basis) pro Einheit     |integer               |             |
-  |25         |LotNo                          |Chargennummer                 |string (20)           |             |
-  |26         |SerialNo                       |Seriennummer                  |string (20)           |             |
-  |27         |ExpirationDate                 |Ablaufdatum/MHD               |date, DD.MM.YYYY      |             |
+|----------:|-------------------------------|------------------------------|----------------------|:-----------:|
+||**Felder Bestellkopf, in jeder Zeile zu wiederholen**||||
+| 1         |CustomerOrderNo                |Ihre Bestell-Nr.              |string (35)           | X           |
+|2         |ExpectedReceiptDate            |Wareneingangsdatum            |date, DD.MM.YYYY      |             |
+|3         |ReferenceText                  |Referenztext/-nummer          |string (35)           |             |
+|4         |VendorShipmentNo               |Lieferscheinrn. Lieferant     |string (35)           |             |
+|5         |ShippedFromName                |Lieferant Name, Zeile 1       |string (50)           |             |
+|6         |ShippedFromName2               |Lieferant Name, Zeile 2       |string (50)           |             |
+|7         |ShippedFromContact             |Lieferant Kontakt             |string (50)           |             |
+|8         |ShippedFromAddress             |Lieferant, Straße + Hausnr.   |string (50)           |             |
+|9         |ShippedFromPostCode            |Lieferant, Postleitzahl       |string (20)           |             |
+|10         |ShippedFromCity                |Lieferant, Ort                |string (30)           |             |
+|11         |ShippedFromCounty              |Lieferant, Bezirk/Landkreis   |string (30)           |             |
+|12         |ShippedFromCountryRegionCode   |Lieferant, Länderkürzel ISO2  |string (2)            |             |
+|13         |ShippedFromEmail               |Lieferant, Email              |string (80)           |             |
+|14         |Comment                        |Kommentar                     |string                |             |
+|16         |Description                    |Beschreibung der Datei        |string (30)           | X           |
+|17         |Path                           |Dateiname                     |string (255)          | X           |
+||**Felder Bestellzeilen**||||
+|18         |CustomerLineNo                 |Zeilenreferenz Bestellposition|string (20)           |             |
+|10         |DepositCustomerItemNo          |Artikelnr. / SKU              |string (30)           | X           |
+|20         |Description1                   |Artikelbeschreibung, Zeile 1  |string (50)           |             |
+|21         |Description2                   |Artikelbeschreibung, Zeile 2  |string (50)           |             |
+|22         |Quantity                       |Menge                         |integer               | X           |
+|23         |UnitOfMeasureCode              |Einheit, ggf. Mapping erford. |string (20)           |             |
+|24         |QtyPerUnitOfMeasure            |Menge (Basis) pro Einheit     |integer               |             |
+|25         |LotNo                          |Chargennummer                 |string (20)           |             |
+|26         |SerialNo                       |Seriennummer                  |string (20)           |             |
+|27         |ExpirationDate                 |Ablaufdatum/MHD               |date, DD.MM.YYYY      |             |
 
-# 3.5. Kundenindividuelles Format
+# 3.4. Kundenindividuelles Format
 
 Es besteht auch die Möglichkeit abweichende Spaltennamen in der CSV-Datei auszugeben.\
 Es ist jedoch zwingend erforderlich,\
