@@ -25,7 +25,7 @@ Nachfolgend nun die Schemabeschreibung.
 <details>
 <summary>Schemabeschreibung des ORDERS-Formats</summary>
 
-Schema: ORDERS.XSD
+Schema: [ORDERS.xsd](xml-schemas/ORDERS.xsd)
 
 
  |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |  Mandatory  |
@@ -217,7 +217,7 @@ Nachfolgend nun die Schemabeschreibung.
 <details>
 <summary>Schemabeschreibung des PURCHASEORDERS-Formats</summary
 
-Schema: PurchaseOrders.xsd
+Schema: [PURCHASEORDERS.xsd](xml-schemas/PURCHASEORDERS.xsd)
 
   |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |  Mandatory  |
   |----------:|-------------------------------|------------------------------|----------------------|:-----------:|
@@ -271,7 +271,7 @@ Dateiname: DESADV_*.xml
 <details>
 <summary>Schemdefinition des DESADV-Formats</summary>
 
-Schema: Desadv.xsd
+Schema: [DESADV.xsd](xml-schemas/DESADV.xsd)
 
  |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
  |----------:|-------------------------------|------------------------------|----------------------|
@@ -418,9 +418,11 @@ OSTRPT_CustomerOrderNo_StatusCode_YYYYMMDD_HHmmss.xml
 
 Der Dateiname dient zur Information kann aber nicht sicher ausgewertet werden. 
 
+
 <details>
 <summary>Schemadefinition des OSTRPT-Formats</summary>
 
+Schema: [OSTRPT.xsd](xml-schemas/OSTRPT.xsd)
   
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
 |----------:|-------------------------------|------------------------------|----------------------|
@@ -463,6 +465,8 @@ Dateiname: WARENEINGANG_*.xml
 
 <details>
 <summary>Schemadefinition des RECADV-Formats</summary>
+
+Schema: [RECADV.xsd](xml-schemas/RECADV.xsd)
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |
 |----------:|-------------------------------|------------------------------|----------------------|
