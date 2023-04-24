@@ -652,6 +652,8 @@ Weitere Felder, wie z. B. Gebinde und diverse Freifelder, stehen zur verfügung 
  |55         |LotNo                          |Chargenummer                  |string (20)           |             |
  |56         |SerialNo                       |Seriennummer                  |string (20)           |             |
 
+</details>
+
 #### Aufbau CSV Flat Format
 Es muss für jede Auftragsposition eine Zeile in der CSV Datei vorhanden sein.\
 Wenn Sie also einen Auftrag mit 3 Positionen übermitteln wollen,\
@@ -701,7 +703,7 @@ die Auswertung des Dateinamens dem Auftrag zugeordnet werden.\
 |26         |SerialNo                       |Seriennummer                  |string (20)           |             |
 |27         |ExpirationDate                 |Ablaufdatum/MHD               |date, DD.MM.YYYY      |             |
 
-# 3.4. Kundenindividuelles Format
+# 5. Kundenindividuelles Format
 
 Es besteht auch die Möglichkeit abweichende Spaltennamen in der CSV-Datei auszugeben.\
 Es ist jedoch zwingend erforderlich,\
@@ -723,12 +725,12 @@ Beispiel Artikel:
     4711;4312345678901;Sehr schöner Artikel
     4712;4312345678812;Sehr nützlicher Artikel
 
-# 4. Rückmeldungen (CSV)
+# 6. Rückmeldungen (CSV)
 
 Aufgrund des Wechsels auf ein neues WMS können wir nun auch diverse Exporte per CSV anbieten.\
 Diese werden zukünftig hier beschrieben.
 
-# 5. Allgemeine Hinweise zur Wartung der Schnittstelle
+# 7. Allgemeine Hinweise zur Wartung der Schnittstelle
 
 Die Schnittstelle wird von uns bei Bedarf erweitert.\
 D. h. es können neue Formate hinzukommen oder bestehende Formate werden um weitere Felder/Strukturen ergänzt.
@@ -740,7 +742,7 @@ Auf Grund möglicher Erweiterungen empfehlen wir, auf eine strikte Formatprüfun
 Fragen sie benötigte Daten ab und ignorieren sie Felder, die sie nicht benötigen oder die bisher nicht vorhanden waren.\
 So sollte es nicht zu Problemen kommen, wenn wir Erweiterungen an unserer Schnittstelle vornehmen.
 
-# 6. Versionshistorie
+# 8. Versionshistorie
 
 |Version    |  Datum   |   Änderungen                 |   Bearbeiter    |
 |-----------|----------|------------------------------|-----------------|
