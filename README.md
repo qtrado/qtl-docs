@@ -1,3 +1,19 @@
+<img
+  src="/images/logo.jpg"
+  alt="Logo QTRADO Logistics"
+  align="left"   
+  style="margin: 0 auto; max-width: 150px">
+QTRADO Logistics GmbH & Co. KG\
+Kimplerstraße 340\
+47809 Krefeld\
+Deutschland
+
+Tel. 02151 529 200\
+E-Mail info[at]qtrado-logistics.de\
+Web www.qtrado-logistics.de
+
+<br clear="left">
+
 # 1. Importformate / Inbound Messages (XML)
 
 Unser System bietet die Möglichkeit aus verschiedenen Formaten Informationen zu beziehen.\
