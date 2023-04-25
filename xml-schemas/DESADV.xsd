@@ -26,7 +26,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerNo" minOccurs="1" maxOccurs="1">
+              <xs:element name="TenantId" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                   <xs:documentation>This is your Customer No. at QL. It will be defined by QTRADO Logistics Sales department and given to you. Max. 20 characters of type string</xs:documentation>
                 </xs:annotation>

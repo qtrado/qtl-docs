@@ -4,12 +4,12 @@
     <DocumentType>RECADV</DocumentType>
     <TransferFlag>0</TransferFlag>
     <WarehouseGLN>4399902394116</WarehouseGLN>
-    <CustomerNo>4800352</CustomerNo>
+    <CustomerNo>M99</CustomerNo>
     <EDIRemoteSystemCode />
     <No>EKL145468</No>
     <PurchaseOrdeNo>BE0020712</PurchaseOrdeNo>
     <ReceivedDate>16.06.2021</ReceivedDate>
-	<YourReference>Some reference text</YourReference>
+	  <YourReference>Some reference text</YourReference>
     <Customer_Address>
       <No>4800352</No>
       <CustomerGLN />

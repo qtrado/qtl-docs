@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<xml>
+	<Header>
+		<EdiPartnerCode>EDIPARTNER</EdiPartnerCode>
+		<TenantId>M99</TenantId>
+		<Date>2020-04-08T10:05:02+02:00</Date>
+		<FileType>Orders</FileType>
+		<Remotesystem>DEFAULT</Remotesystem>
+	</Header>
+	<Orders>
+		<Order>
+      <CustomerOrderNo>112634</CustomerOrderNo>      
+      <ShipToName>Frau Mustermann</ShipToName>
+      <ShipToName2 />
+      <ShipToContact></ShipToContact>
+			<ShipToAddress>Mustergasse 10</ShipToAddress>
+      <ShipToPostCode>51580</ShipToPostCode>
+			<ShipToCity>Reichshof</ShipToCity>			
+			<ShipToCountryRegionCode>DE</ShipToCountryRegionCode>			
+			<Products>
+				<Product>					
+					<Quantity>1</Quantity>
+					<DepositCustomerItemNo>4001824234806</DepositCustomerItemNo>					
+				</Product>
+				<Product>
+					<Quantity>1</Quantity>
+					<DepositCustomerItemNo>4001824234028</DepositCustomerItemNo>					
+				</Product>
+			</Products>			
+		</Order>
+    <Order>
+      <CustomerOrderNo>112635</CustomerOrderNo>      
+      <ShipToName>Herr Mustermann</ShipToName>
+      <ShipToName2 />
+      <ShipToContact></ShipToContact>
+      <ShipToAddress>Mustergasse 10</ShipToAddress>
+      <ShipToPostCode>51580</ShipToPostCode>
+      <ShipToCity>Reichshof</ShipToCity>
+      <ShipToCountryRegionCode>DE</ShipToCountryRegionCode>      
+      <Products>
+        <Product>          
+          <Quantity>1</Quantity>
+          <DepositCustomerItemNo>4001824234806</DepositCustomerItemNo>          
+        </Product>
+        <Product>          
+          <Quantity>1</Quantity>
+          <DepositCustomerItemNo>4001824234028</DepositCustomerItemNo>          
+        </Product>
+      </Products>      
+    </Order>
+	</Orders>
+</xml>

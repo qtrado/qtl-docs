@@ -16,7 +16,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerNo" minOccurs="1" maxOccurs="1">
+              <xs:element name="TenantId" minOccurs="1" maxOccurs="1">
                 <xs:annotation>
                   <xs:documentation>Customer Number. It will be defined by QTRADO Logistics sales department and given to you. Max. 20 characters of type string</xs:documentation>
                 </xs:annotation>
@@ -335,17 +335,7 @@
                                       <xs:pattern value="([*]{0})|([0]?[0-9]|[12][0-9]|[3][01])[./-]([0]?[1-9]|[1][0-2])[./-]([0-9]{4}|[0-9]{2})" />
                                     </xs:restriction>
                                   </xs:simpleType>
-                                </xs:element>
-                                <xs:element name="LocationCode" minOccurs="0" maxOccurs="1">
-                                  <xs:annotation>
-                                    <xs:documentation>Warehouse location code, max. 10 characters</xs:documentation>
-                                  </xs:annotation>
-                                  <xs:simpleType>
-                                    <xs:restriction base="xs:string">
-                                      <xs:maxLength value="10" />
-                                    </xs:restriction>
-                                  </xs:simpleType>
-                                </xs:element>
+                                </xs:element>                                
                               </xs:sequence>                              
                             </xs:complexType>
                           </xs:element>

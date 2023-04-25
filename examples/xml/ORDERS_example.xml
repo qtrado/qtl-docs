@@ -68,9 +68,7 @@
 					<QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
 					<UnitWeight>0.200</UnitWeight>
 					<LotNo/>
-					<SerialNo/>
-					<LocationCode/>
-					<BinCode/>
+					<SerialNo/>					
 				</Product>
 				<Product>
 					<Type>simple</Type>
@@ -83,9 +81,7 @@
 					<QtyPerUnitOfMeasure>1</QtyPerUnitOfMeasure>
 					<UnitWeight>0.200</UnitWeight>
 					<LotNo/>
-					<SerialNo/>
-					<LocationCode/>
-					<BinCode/>
+					<SerialNo/>					
 				</Product>
 			</Products>			
 		</Order>

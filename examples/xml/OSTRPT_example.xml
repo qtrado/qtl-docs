@@ -3,14 +3,14 @@
   <Type>OSTRPT</Type>
   <VendorGLN>4399902394116</VendorGLN>
   <CustomerGLN />
-  <CustomerNo>4800363</CustomerNo>
+  <CustomerNo>M99</CustomerNo>
   <Status>
     <CustomerOrderNo>93149</CustomerOrderNo>
     <StatusCode>5</StatusCode>
     <StatusDescription>geliefert(vollständig)</StatusDescription>
     <StatusTimestamp>20210909000000</StatusTimestamp>
     <CorrespondingDocumentType>2</CorrespondingDocumentType>
-    <CorrespondingDocumentNo>VKL1001865</CorrespondingDocumentNo>
+    <CorrespondingDocumentNo>SH100</CorrespondingDocumentNo>
     <CorrespondingDocumentDate>20210909</CorrespondingDocumentDate>
     <EDIRemoteSystemCode>DEFAULT</EDIRemoteSystemCode>
     <Errors />

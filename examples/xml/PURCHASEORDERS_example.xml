@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xml>
+  <Header>
+    <EdiPartnerCode>EDIPARTNER</EdiPartnerCode>
+    <CustomerNo>M99</CustomerNo>
+    <FileType>PURCHASEORDERS</FileType>
+    <Date>2023-02-20T15:07:09</Date>
+    <Remotesystem>DEFAULT</Remotesystem>
+  </Header>
+  <PurchaseOrders>
+    <PurchaseOrder>
+      <CustomerOrderNo>PO1435400</CustomerOrderNo>
+      <ExpectedReceiptDate>25.04.2023</ExpectedReceiptDate>
+      <ReferenceText />
+      <VendorShipmentNo />
+      <ShippedFromName>Vendor</ShippedFromName>
+      <ShippedFromName2 />
+      <ShippedFromContact>VendorContact</ShippedFromContact>
+      <ShippedFromAddress>VendorAddress</ShippedFromAddress>
+      <ShippedFromAddress2 />
+      <ShippedFromPostCode>PostCode</ShippedFromPostCode>
+      <ShippedFromCity>City</ShippedFromCity>
+      <ShippedFromCounty></ShippedFromCounty>
+      <ShippedFromCountryRegionCode>DE</ShippedFromCountryRegionCode>
+      <ShippedFromEmail>somemail@mail.com</ShippedFromEmail>
+      <Comment />
+      <Attachments />
+      <Products>
+        <Product>
+          <CustomerLineNo>1</CustomerLineNo>
+          <DepositCustomerItemNo>ItemNo</DepositCustomerItemNo>
+          <Description1>ItemDescription</Description1>
+          <Description2 />
+          <Quantity>1</Quantity>
+          <UnitOfMeasureCode />
+          <QtyPerUnitOfMeasure />
+          <LotNo />
+          <SerialNo />
+          <ExpirationDate />
+        </Product>
+        <Product>
+          <CustomerLineNo>2</CustomerLineNo>
+          <DepositCustomerItemNo>ItemNo2</DepositCustomerItemNo>
+          <Description1>ItemDescription</Description1>
+          <Description2 />
+          <Quantity>2</Quantity>
+          <UnitOfMeasureCode />
+          <QtyPerUnitOfMeasure />
+          <LotNo>A47B2</LotNo>
+          <SerialNo />
+          <ExpirationDate />
+        </Product>
+      </Products>
+    </PurchaseOrder>
+  </PurchaseOrders>
+</xml>
