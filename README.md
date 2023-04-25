@@ -579,34 +579,72 @@ damit die Dateien automatisiert importiert werden können.
 
 |   Pos.    |   Name                        |  Description                 |  Data Type (length)  |Mandatory|
 |----------:|-------------------------------|------------------------------|----------------------|:-------:|
-|1| DepositCustomerItemNo            | Artikel-Nr./SKU| string (30)    |x|
-|2| Description      | Artikel-Bezeichnung             | string (100) |x|
-|3| EAN              | EAN des Produktes                 | string (50)  ||
-|4| UnitOfMeasureCode| Artikeleinheitencode, z.B. PCE, PCS | string (20) ||
-|5| QtyPerUnitOfMeasure| Anzahl per *UnitOfMeasureCode*    | integer   ||
-|6| UnitPrice        | Preis des Einzelproduktes         | decimal      ||
-|7| Width            | Breite des Produktes              | decimal      ||
-|8| Height           | Höhe des Produktes                | decimal      ||
-|9| Length           | Länge des Produktes               | decimal      ||
-|10| UnitVolume       | Volumen des Produktes             | decimal      ||
-|11| Weight           | Gewicht des Produktes             | decimal      ||
-|12| Language         | Sprache der Beschreibung \*     | string (2)   ||
-|13| ReorderPoint     | Meldebestand                      | integer      ||
-|14| TariffNumber     | Zolltarifnummer                   | string (20)    ||
-|15| CountryOfOriginCode| Ursprungsland (ISO ALPHA 2)| string (2)|
-|16| SerialNoRequired | Seriennummernpflichtiger Artikel  | string (1), Y/1= Ja, N/0=Nein||
-|17| LotNoRequired    | Chargennummerpflichtiger Artikel  | string, Y/1=Ja, N/0=Nein||
-|18| ProductCanExpire | Artikel mit MHD/VD | string, Y/1=Ja, N/0=Nein||
-|19| Picture|Dateiname oder URL zum Download|string||
-
-\* Wenn der Code DE oder leer ist, wird die Beschreibung als Standard
-Artikel-Beschreibung gesetzt. Wenn ein anderer Code verwendet wird, wird
-dieser als Übersetzung im Navision angelegt.
+|1|ItemNo            | Artikel-Nr./SKU| string (30)    |x|
+|2|Description      | Artikel-Bezeichnung             | string (100) |x|
+|3|DescriptionTranslation1Lang|Sprachcode Übersetzung 1|string(2)|
+|4|DescriptionTranslation1Text|Übersetzung 1|string(2)|
+|5|DescriptionTranslation2Lang|Sprachcode Übersetzung 2|string(2)|
+|6|DescriptionTranslation2Text|Übersetzung 2|string(2)|
+|7|DescriptionTranslation3Lang|Sprachcode Übersetzung 3|string(2)|
+|8|DescriptionTranslation3Text|Übersetzung 3|string(2)|
+|9|DescriptionTranslation4Lang|Sprachcode Übersetzung 4|string(2)|
+|10|DescriptionTranslation4Text|Übersetzung 4|string(2)|
+|11|Barcode| Barcode, z.B. GTIN/EAN| string||
+|12|Alias Barcode 1|Weiterer Barcode|string||
+|13|Alias Barcode 2|Weiterer Barcode|string||
+|14|Alias Barcode 3|Weiterer Barcode|string||
+|15|Alias Barcode 4|Weiterer Barcode|string||
+|16|Alias Barcode 5|Weiterer Barcode|string||
+|17|UnitOfMeasureCodeBase| Artikeleinheitencode, z.B. PCE, PCS | string (20) ||
+|18|QtyPerUnitOfMeasureBase| Anzahl per *UnitOfMeasureCodeBase*, meistens 1    | integer   ||
+|19|PackagingUnit1Name|Verpackungseinheit 1 Name|string||
+|20|PackagingUnit1Quantity|Verpackungseinheit 1 Menge|integer||
+|21|PackagingUnit1Barcode|Verpackungseinheit 1 Barcode|string||
+|22|PackagingUnit1Width(cm)|Verpackungseinheit 1 Breite in cm|string||
+|23|PackagingUnit1Height(cm)|Verpackungseinheit 1 Höhe in cm|string||
+|24|PackagingUnit1Length(cm)|Verpackungseinheit 1 Tiefe in cm|string||
+|25|PackagingUnit1Weight(kg)|Verpackungseinheit 1 Gewicht in kg||
+|26|PackagingUnit2Name|Verpackungseinheit 2 Name|string||
+|27|PackagingUnit2Quantity|Verpackungseinheit 2 Menge|integer||
+|28|PackagingUnit2Barcode|Verpackungseinheit 2 Barcode|string||
+|29|PackagingUnit2Width(cm)|Verpackungseinheit 2 Breite in cm|string||
+|30|PackagingUnit2Height(cm)|Verpackungseinheit 2 Höhe in cm|string||
+|31|PackagingUnit2Length(cm)|Verpackungseinheit 2 Tiefe in cm|string||
+|32|PackagingUnit2Weight(kg)|Verpackungseinheit 2 Gewicht in kg||
+|33|PackagingUnit3Name|Verpackungseinheit 3 Name|string||
+|34|PackagingUnit3Quantity|Verpackungseinheit 3 Menge|integer||
+|35|PackagingUnit3Barcode|Verpackungseinheit 3 Barcode|string||
+|36|PackagingUnit3Width(cm)|Verpackungseinheit 3 Breite in cm|string||
+|37|PackagingUnit3Height(cm)|Verpackungseinheit 3 Höhe in cm|string||
+|38|PackagingUnit3Length(cm)|Verpackungseinheit 3 Tiefe in cm|string||
+|39|PackagingUnit3Weight(kg)|Verpackungseinheit 3 Gewicht in kg||
+|40|UnitPrice        | Preis des Einzelproduktes         | decimal      ||
+|41|Width(cm)            | Breite des Produktes in cm              | decimal      ||
+|42|Height(cm)           | Höhe des Produktes in cm                | decimal      ||
+|43|Length(cm)           | Länge des Produktes in cm               | decimal      ||
+|44|Weight(kg)           | Gewicht des Produktes in kg             | decimal      ||
+|45|ReorderPoint     | Meldebestand                      | integer      ||
+|46|TariffNumber     | Zolltarifnummer                   | string (20)    ||
+|47|CountryOfOriginCode| Ursprungsland (ISO 3166-2)| string (2)|
+|48|SerialNoRequired | Seriennummernpflichtiger Artikel  | string (1), Y/1= Ja, N/0=Nein||
+|49|LotNoRequired    | Chargennummerpflichtiger Artikel  | string, Y/1=Ja, N/0=Nein||
+|50|ProductCanExpire | Artikel mit MHD/VD | string, Y/1=Ja, N/0=Nein||
+|51|Picture1|Dateiname oder URL zum Download|string||
+|52|Picture1Description|Beschreibung zu Bild 1|string||
+|53|Picture2|Dateiname oder URL zum Download|string||
+|54|Picture2Description|Beschreibung zu Bild 1|string||
+|55|Picture3|Dateiname oder URL zum Download|string||
+|56|Picture3Description|Beschreibung zu Bild 1|string||
+|57|Picture4|Dateiname oder URL zum Download|string||
+|58|Picture4Description|Beschreibung zu Bild 1|string||
+|59|Picture5|Dateiname oder URL zum Download|string||
+|60|Picture5Description|Beschreibung zu Bild 1|string|
+|61|Archived|Artikel archiviert/inaktiv?|string (1), Y/1= Ja, N/0=Nein||
 
 </details>
 
 Bei der Auflistung der Felder handelt es sich um die wichtigsten Informationen.\
-Weitere Felder, wie z. B. Gebinde und diverse Freifelder, stehen zur verfügung und können bei Bedarf abgestimmt werden.
+Weitere Felder, z.B. Freifelder, stehen zur verfügung und können bei Bedarf abgestimmt werden.
 
 ## 3.2. ORDERS - Aufträge / Sales Order (CSV)
 
