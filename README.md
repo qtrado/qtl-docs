@@ -1,7 +1,8 @@
 <img
   src="/images/logo.jpg"
   alt="Logo QTRADO Logistics"
-  align="left"   
+  align="left"
+  width="550px"
   style="margin: 0 auto; max-width: 150px">
 QTRADO Logistics GmbH & Co. KG\
 Kimplerstraße 340\
